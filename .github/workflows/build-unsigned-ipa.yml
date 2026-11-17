@@ -1,0 +1,38 @@
+name: Build GaviStore Demo (unsigned IPA)
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+jobs:
+  build:
+    runs-on: macos-15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Build unsigned app
+        run: |
+          xcodebuild \
+            -project GaviStoreDemo.xcodeproj \
+            -scheme GaviStoreDemo \
+            -configuration Release \
+            -sdk iphoneos \
+            -destination 'generic/platform=iOS' \
+            -derivedDataPath build/DerivedData \
+            CODE_SIGNING_ALLOWED=NO \
+            CODE_SIGNING_REQUIRED=NO \
+            CODE_SIGN_IDENTITY='' \
+            build
+      - name: Package unsigned IPA
+        run: |
+          APP_PATH="build/DerivedData/Build/Products/Release-iphoneos/GaviStoreDemo.app"
+          test -d "$APP_PATH"
+          mkdir -p build/Payload
+          cp -R "$APP_PATH" build/Payload/GaviStoreDemo.app
+          (cd build && /usr/bin/zip -qry GaviStoreDemo-unsigned.ipa Payload)
+      - name: Upload IPA artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: GaviStoreDemo-unsigned-IPA
+          path: build/GaviStoreDemo-unsigned.ipa
+          if-no-files-found: error
+          retention-days: 14

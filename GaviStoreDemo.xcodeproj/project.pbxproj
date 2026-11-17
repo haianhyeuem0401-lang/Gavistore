@@ -1,0 +1,30 @@
+// !$*UTF8*$!
+{
+  archiveVersion = 1;
+  classes = {};
+  objectVersion = 56;
+  objects = {
+    A00000000000000000000001 /* Project object */ = {isa = PBXProject; attributes = {BuildIndependentTargetsInParallel = 1; LastUpgradeCheck = 1600;}; buildConfigurationList = A00000000000000000000010; compatibilityVersion = "Xcode 14.0"; developmentRegion = en; hasScannedForEncodings = 0; knownRegions = (en, Base,); mainGroup = A00000000000000000000200; productRefGroup = A00000000000000000000201; projectDirPath = ""; projectRoot = ""; targets = (A00000000000000000000300,);};
+    A00000000000000000000002 /* App.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = App.swift; sourceTree = "<group>";};
+    A00000000000000000000003 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>";};
+    A00000000000000000000004 /* GaviStoreDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GaviStoreDemo.app; sourceTree = BUILT_PRODUCTS_DIR;};
+    A00000000000000000000005 /* App.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000002;};
+    A00000000000000000000006 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000003;};
+    A00000000000000000000007 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A00000000000000000000008;};
+    A00000000000000000000008 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>";};
+    A00000000000000000000200 = {isa = PBXGroup; children = (A00000000000000000000202, A00000000000000000000201,); sourceTree = "<group>";};
+    A00000000000000000000201 = {isa = PBXGroup; children = (A00000000000000000000004,); name = Products; sourceTree = "<group>";};
+    A00000000000000000000202 = {isa = PBXGroup; children = (A00000000000000000000002, A00000000000000000000003, A00000000000000000000008,); path = GaviStoreDemo; sourceTree = "<group>";};
+    A00000000000000000000300 /* GaviStoreDemo */ = {isa = PBXNativeTarget; buildConfigurationList = A00000000000000000000011; buildPhases = (A00000000000000000000301, A00000000000000000000302, A00000000000000000000303,); buildRules = (); dependencies = (); name = GaviStoreDemo; productName = GaviStoreDemo; productReference = A00000000000000000000004; productType = "com.apple.product-type.application";};
+    A00000000000000000000301 /* Sources */ = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (A00000000000000000000005, A00000000000000000000006,); runOnlyForDeploymentPostprocessing = 0;};
+    A00000000000000000000302 /* Frameworks */ = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0;};
+    A00000000000000000000303 /* Resources */ = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (A00000000000000000000007,); runOnlyForDeploymentPostprocessing = 0;};
+    A00000000000000000000010 = {isa = XCConfigurationList; buildConfigurations = (A00000000000000000000400, A00000000000000000000401,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release;};
+    A00000000000000000000011 = {isa = XCConfigurationList; buildConfigurations = (A00000000000000000000402, A00000000000000000000403,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release;};
+    A00000000000000000000400 = {isa = XCBuildConfiguration; buildSettings = {CLANG_ENABLE_MODULES = YES; SDKROOT = iphoneos;}; name = Debug;};
+    A00000000000000000000401 = {isa = XCBuildConfiguration; buildSettings = {CLANG_ENABLE_MODULES = YES; SDKROOT = iphoneos;}; name = Release;};
+    A00000000000000000000402 = {isa = XCBuildConfiguration; buildSettings = {GENERATE_INFOPLIST_FILE = YES; INFOPLIST_KEY_CFBundleDisplayName = GaviStore; IPHONEOS_DEPLOYMENT_TARGET = 16.0; PRODUCT_BUNDLE_IDENTIFIER = com.gbao.gavistore.demo; PRODUCT_NAME = GaviStoreDemo; SWIFT_VERSION = 5.0; TARGETED_DEVICE_FAMILY = "1,2";}; name = Debug;};
+    A00000000000000000000403 = {isa = XCBuildConfiguration; buildSettings = {GENERATE_INFOPLIST_FILE = YES; INFOPLIST_KEY_CFBundleDisplayName = GaviStore; IPHONEOS_DEPLOYMENT_TARGET = 16.0; PRODUCT_BUNDLE_IDENTIFIER = com.gbao.gavistore.demo; PRODUCT_NAME = GaviStoreDemo; SWIFT_VERSION = 5.0; TARGETED_DEVICE_FAMILY = "1,2";}; name = Release;};
+  };
+  rootObject = A00000000000000000000001;
+}
